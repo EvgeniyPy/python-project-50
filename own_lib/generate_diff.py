@@ -1,22 +1,11 @@
 import json
 
-# first_file = "/home/evgeniy/my_project/python-project-50/own_lib/file1.json"
-# second_file = "/home/evgeniy/my_project/python-project-50/own_lib/file2.json"
-
-
-# def get_file(file_path: str) -> dict:
-#     with open(file_path) as file_data:
-#         return json.load(file_data)
-# data1 = get_file(first_file)
-# data2 = get_file(second_file)
 
 def generate_diff(first_file, second_file):
     with open(first_file) as f:
         data1 = json.load(f)
     with open(second_file) as f:
         data2 = json.load(f)
-
- 
 
     keys = set(data1)
     keys.update(data2)
@@ -45,7 +34,3 @@ def generate_diff(first_file, second_file):
     for key in sortdata:
         print("    " + key, ':', sortdata[key])
     return '}'
-
-
-# if __name__ == "__main__":
-#     generate_diff(first_file, second_file)
