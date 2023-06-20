@@ -1,28 +1,21 @@
 install:
 	poetry install
 
-build:
-	poetry build
-
-package-install:
-	python3 -m pip install --user dist/*.whl
-
-package-reinstall:
-	python3 -m pip install --user dist/*.whl --force-reinstall
-
-lint:
-	poetry run flake8 gendiff
-
-gendiff-help:
-	poetry run gendiff -h
-
-gendiff:
-	poetry run gendiff tests/fixtures/file1.json tests/fixtures/file2.json
-
 test:
-	poetry run pytest 
+	poetry run pytest
 
 test-coverage:
-	poetry run pytest --cov --cov-report term-missing --cov-report xml
+	poetry run pytest --cov=hexlet_python_package --cov-report xml
 
-.PHONY: install package-install build  package-reinstall lint gendiff-help gendiff test
+lint:
+	poetry run flake8 hexlet_python_package
+
+selfcheck:
+	poetry check
+
+check: selfcheck test lint
+
+build: check
+	poetry build
+
+.PHONY: install test lint selfcheck check build

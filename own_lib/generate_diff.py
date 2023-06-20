@@ -68,5 +68,4 @@ def generate_diff(file_path1, file_path2):
             diff.append(f'  + {item}: {file_2[item]}')
     diff.sort(key=lambda x: x[4:x.find(':')])
     diff = ['{'] + diff + ['}']
-    print(key_same)
     return '\n'.join(diff)
