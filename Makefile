@@ -1,16 +1,21 @@
-lint:
-	poetry run flake8 gendiff tests
-test:
-	poetry run pytest
-gendiff:
-	poetry run gendiff
 install:
 	poetry install
-build:
+
+test:
+	poetry run pytest
+
+test-coverage:
+	poetry run pytest --cov=gendiff --cov-report xml
+
+lint:
+	poetry run flake8 gendiff
+
+selfcheck:
+	poetry check
+
+check: selfcheck test lint
+
+build: check
 	poetry build
-publish:
-	poetry publish --build --dry-run
-package-install:
-	pip install --user dist/*.whl
-coverage:
-	poetry run pytest --cov=tests/ --cov-report xml
+
+.PHONY: install test lint selfcheck check build
