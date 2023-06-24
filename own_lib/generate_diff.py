@@ -1,15 +1,10 @@
 import json
+from gendiff.parser import parser
 
 
-def generate_diff(file_path1, file_path2):
+def generate_diff(file1, file2):
+    file_1, file_2 = parser(file1, file2)
     diff = []
-    if file_path1.split('.')[1] == 'json':
-        file_1 = json.load(open(file_path1))
-        file_2 = json.load(open(file_path2))
-
-    else:
-        raise Exception('Invalid file format')
-
     key_set_file1 = set(file_1.keys())
     key_set_file2 = set(file_2.keys())
 
