@@ -5,7 +5,7 @@ from gendiff.formatters.plain import format_palin
 FORMAT_STYLISH = 'stylish'
 FORMAT_PLAIN = 'plain'
 
-# noqa: C901
+
 def generate_diff(file1, file2, format):
     data1, data2 = parser(file1, file2)
     if format == FORMAT_STYLISH:
