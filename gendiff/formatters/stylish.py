@@ -41,9 +41,11 @@ def format_stylish(data, shift=1):
         value = value.get('value')
         if state == 'changed':
             result.append(POSITION.format(
-                indent, PREFIX[state]['old_value'], key, stringify(value[1], shift + 1)))
+                indent, PREFIX[state]['old_value'],
+                key, stringify(value[1], shift + 1)))
             result.append(POSITION.format(
-                indent, PREFIX[state]['new_value'], key, stringify(value[0], shift + 1)))
+                indent, PREFIX[state]['new_value'],
+                key, stringify(value[0], shift + 1)))
         elif state != 'nested':
             result.append(POSITION.format(
                 indent, PREFIX[state], key, stringify(value[0], shift + 1)))
