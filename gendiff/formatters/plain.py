@@ -20,7 +20,7 @@ def stringify(data):
     else:
         return json.dumps(data)
 
-
+# noqa: C901
 def format_palin(data, path=None):
     if path is None:
         path = []
