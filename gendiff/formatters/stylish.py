@@ -31,9 +31,8 @@ def stringify(data, shift):
         result.append(json.dumps(data))
     return '\n'.join(result)
 
+
 # noqa: C901
-
-
 def format_stylish(data, shift=1):
     result = ['{']
     indent = INDENT * (4 * shift - 2)
