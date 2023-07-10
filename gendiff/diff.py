@@ -13,4 +13,4 @@ def generate_diff(file1, file2, format):
     elif format == FORMAT_PLAIN:
         return format_palin(comparator(data1, data2))
     else:
-        raise Exception(f'Неверный формат')
+        raise Exception(f"Wrong format")
