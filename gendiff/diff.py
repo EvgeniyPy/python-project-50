@@ -9,9 +9,8 @@ FORMAT_PLAIN = 'plain'
 def generate_diff(file1, file2, format):
     data1, data2 = parser(file1, file2)
     if format == FORMAT_STYLISH:
-         return format_stylish(comparator(data1, data2))
+        return format_stylish(comparator(data1, data2))
     elif format == FORMAT_PLAIN:
-         return format_palin(comparator(data1, data2)) 
+        return format_palin(comparator(data1, data2))
     else:
-         raise Exception(f'Неверный формат')
-
+        raise Exception(f'Неверный формат')
