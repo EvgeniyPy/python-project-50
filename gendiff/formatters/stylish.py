@@ -32,7 +32,7 @@ def stringify(data, shift):
     return '\n'.join(result)
 
 
-def format_stylish(data, shift=1):  # noqa: C901
+def format_stylish(data, shift=1):
     result = ['{']
     indent = INDENT * (4 * shift - 2)
 

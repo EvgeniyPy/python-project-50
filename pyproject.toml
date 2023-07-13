@@ -16,6 +16,9 @@ pytest = "^7.2.0"
 flake8 = "^5.0.4"
 pytest-cov = "^4.0.0"
 
+[tool.ruff]
+ignore = ["C901"]
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"

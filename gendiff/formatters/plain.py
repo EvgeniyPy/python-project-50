@@ -13,15 +13,13 @@ PREFIX = {
 def stringify(data):
     if isinstance(data, dict):
         return '[complex value]'
-    if data in {'true', 'false', 'null'}:
-        return data
     elif isinstance(data, str):
         return f"'{data}'"
     else:
         return json.dumps(data)
 
 
-def format_palin(data, path=None):  # noqa: C901
+def format_palin(data, path=None):
     if path is None:
         path = []
     result = []
