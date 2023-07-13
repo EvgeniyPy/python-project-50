@@ -10,6 +10,7 @@ import pytest
     ('file6_1.json', 'file6_2.json', FORMAT_PLAIN, 'result_plain.txt'),
     ('test_diff.yaml', 'test_diff2.yml', FORMAT_PLAIN, 'result_plain.txt'),
     ('file6_1.json', 'file6_2.json', FORMTA_JSON, 'result_json.txt'),
+     ('test_diff.yaml', 'test_diff2.yml', FORMTA_JSON, 'result_json.txt'),
 
 ))
 def test_generate_diff_stylish(file1, file2, format, result_file):
