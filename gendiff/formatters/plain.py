@@ -1,4 +1,4 @@
-import json
+# import json
 
 FORMAT_STYLISH = 'plain'
 
@@ -11,12 +11,16 @@ PREFIX = {
 
 
 def stringify(data):
-    if isinstance(data, dict):
+    if isinstance(data, dict) or isinstance(data, list):
         return '[complex value]'
     elif isinstance(data, str):
         return f"'{data}'"
+    elif data in None:
+        return 'null'
+    elif isinstance(data, bool):
+        return 'true' if data else 'false'
     else:
-        return json.dumps(data)
+        return data
 
 
 def format_palin(data, path=None):
