@@ -3,17 +3,17 @@ import pytest
 
 
 @pytest.mark.parametrize('file1, file2, format, result_file', (
-    ('file1.json', 'file2.json', FORMAT_STYLISH, 'result.txt'),
-    ('file1.yaml', 'file2.yml', FORMAT_STYLISH, 'result.txt'),
-    ('file6_1.json', 'file6_2.json', FORMAT_STYLISH, 'Result_stylish.txt'),
-    ('test_diff.yaml', 'test_diff2.yml', FORMAT_STYLISH, 'Result_stylish.txt'),
-    ('file6_1.json', 'file6_2.json', FORMAT_PLAIN, 'result_plain.txt'),
-    ('test_diff.yaml', 'test_diff2.yml', FORMAT_PLAIN, 'result_plain.txt'),
-    ('file6_1.json', 'file6_2.json', FORMTA_JSON, 'result_json.txt'),
-     ('test_diff.yaml', 'test_diff2.yml', FORMTA_JSON, 'result_json.txt'),
+    ('flat1.json', 'flat2.json', FORMAT_STYLISH, 'flat_result.txt'),
+    ('flat1.yaml', 'flat2.yaml', FORMAT_STYLISH, 'flat_result.txt'),
+    ('nested1.json', 'nested2.json', FORMAT_STYLISH, 'result_stylish.txt'),
+    ('nested1.yaml', 'nested2.yaml', FORMAT_STYLISH, 'result_stylish.txt'),
+    ('nested1.json', 'nested2.json', FORMAT_PLAIN, 'result_plain.txt'),
+    ('nested1.yaml', 'nested2.yaml', FORMAT_PLAIN, 'result_plain.txt'),
+    ('nested1.json', 'nested2.json', FORMTA_JSON, 'result_json.txt'),
+     ('nested1.yaml', 'nested2.yaml', FORMTA_JSON, 'result_json.txt'),
 
 ))
-def test_generate_diff_stylish(file1, file2, format, result_file):
+def test_generate_diff(file1, file2, format, result_file):
 
     file_path1 = 'tests/fixtures/' + file1
     file_path2 = 'tests/fixtures/' + file2
