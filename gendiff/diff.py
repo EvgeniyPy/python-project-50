@@ -8,7 +8,7 @@ FORMAT_PLAIN = 'plain'
 FORMTA_JSON = 'json'
 
 
-def generate_diff(file1, file2, format='stylish'):
+def generate_diff(file1, file2, format):
     data1, data2 = parser(file1, file2)
     diff_json = comparator(data1, data2)
     if format == FORMAT_STYLISH:
