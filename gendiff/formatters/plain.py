@@ -15,7 +15,7 @@ def stringify(data):
         return '[complex value]'
     elif isinstance(data, str):
         return f"'{data}'"
-    elif data in None:
+    elif data is None:
         return 'null'
     elif isinstance(data, bool):
         return 'true' if data else 'false'
