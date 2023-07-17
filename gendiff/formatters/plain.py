@@ -4,7 +4,7 @@ FORMAT_STYLISH = 'plain'
 
 
 PREFIX = {
-    'added': 'Propetry \'{0}\' was added with value: {1}',
+    'added': 'Property \'{0}\' was added with value: {1}',
     'removed': 'Property \'{0}\' was removed',
     'changed': 'Property \'{0}\' was updated. From {1} to {2}'
 }
