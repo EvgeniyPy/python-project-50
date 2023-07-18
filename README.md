@@ -10,8 +10,8 @@
 
 ### Requirments installed and configured:
 
-- Python
-- Poetry
+- Python 1.5.1
+- Poetry 3.11.3
 
 ### Setup:
 
