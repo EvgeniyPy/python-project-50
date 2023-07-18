@@ -1,5 +1,3 @@
-# import json
-
 FORMAT_STYLISH = 'plain'
 
 
@@ -23,7 +21,7 @@ def stringify(data):
         return data
 
 
-def format_palin(data, path=None):
+def format_plain(data, path=None):
     if path is None:
         path = []
     result = []
@@ -43,7 +41,7 @@ def format_palin(data, path=None):
             result.append(PREFIX[state].format(
                 '.'.join(path), stringify(value[1]), stringify(value[0])))
         elif state == 'nested':
-            result.append(format_palin(value, path))
+            result.append(format_plain(value, path))
         path.pop()
 
     return '\n'.join(result)
