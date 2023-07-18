@@ -17,5 +17,5 @@ def generate_diff(file1, file2, format='stylish'):
         return format_palin(diff_json)
     elif format == FORMTA_JSON:
         return format_json(diff_json)
-    # else:
-    #     raise Exception("Wrong format")
+    else:
+        raise Exception("Wrong format")
