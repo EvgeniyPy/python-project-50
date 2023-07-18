@@ -1,5 +1,8 @@
-.venv/
+.venv
 __pycache__
-.vscode
-.DS_Store
-.pytest_cache
+gendiff/__pycache__/
+gendiff/scripts/__pycache__/
+dist/
+.pytest_cache/
+.coverage
+coverage.xml
