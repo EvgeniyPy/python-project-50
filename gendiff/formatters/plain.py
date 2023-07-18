@@ -1,4 +1,4 @@
-FORMAT_STYLISH = 'plain'
+FORMAT_PLAIN = 'plain'
 
 
 PREFIX = {
