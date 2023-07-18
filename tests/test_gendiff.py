@@ -7,6 +7,7 @@ import pytest
     ('flat1.yaml', 'flat2.yaml', FORMAT_STYLISH, 'flat_result.txt'),
     ('nested1.json', 'nested2.json', FORMAT_STYLISH, 'result_stylish.txt'),
     ('nested1.yaml', 'nested2.yaml', FORMAT_STYLISH, 'result_stylish.txt'),
+    ('nested1.yml', 'nested2.yml', FORMAT_STYLISH, 'result_stylish.txt'),
     ('nested1.json', 'nested2.json', FORMAT_PLAIN, 'result_plain.txt'),
     ('nested1.yaml', 'nested2.yaml', FORMAT_PLAIN, 'result_plain.txt'),
     ('nested1.json', 'nested2.json', FORMTA_JSON, 'result_json.txt'),
