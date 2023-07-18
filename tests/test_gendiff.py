@@ -11,7 +11,7 @@ import pytest
     ('nested1.json', 'nested2.json', FORMAT_PLAIN, 'result_plain.txt'),
     ('nested1.yaml', 'nested2.yaml', FORMAT_PLAIN, 'result_plain.txt'),
     ('nested1.json', 'nested2.json', FORMTA_JSON, 'result_json.txt'),
-     ('nested1.yaml', 'nested2.yaml', FORMTA_JSON, 'result_json.txt'),
+    ('nested1.yaml', 'nested2.yaml', FORMTA_JSON, 'result_json.txt'),
 
 ))
 def test_generate_diff(file1, file2, format, result_file):
