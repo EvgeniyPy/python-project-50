@@ -8,6 +8,22 @@
 
 [![Actions Status](https://github.com/EvgeniyPy/python-project-50/workflows/hexlet-check/badge.svg)](https://github.com/EvgeniyPy/python-project-50/actions)
 
+### Requirments installed and configured:
+
+- Python
+- Poetry
+
+### Setup:
+
+1. Clone this repository
+2. Install dependencies: `make install`
+3. Build tar and whl package: `make build`
+4. Install package: `make package-install`
+
+#### Use `gendiff -h` command for help.
+
+
+
 
 ### diff json
 [![asciicast](https://asciinema.org/a/C35EwmO2RzgCN9KdV0C65Qxwb.svg)](https://asciinema.org/a/C35EwmO2RzgCN9KdV0C65Qxwb)
