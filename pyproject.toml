@@ -1,8 +1,7 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.1.0"
-description = "
-This is a program that finds differences between two files."
+description = "This is a program that finds differences between two files"
 authors = ["EvgenArt"]
 readme = "README.md"
 packages = [{include = "gendiff"}]
