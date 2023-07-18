@@ -1,5 +1,6 @@
+import pytest 
 from gendiff.diff import generate_diff, FORMAT_STYLISH, FORMAT_PLAIN, FORMTA_JSON
-import pytest
+
 
 
 @pytest.mark.parametrize('file1, file2, format, result_file', (
