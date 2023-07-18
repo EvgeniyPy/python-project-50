@@ -1,4 +1,4 @@
-def comparator(data1, data2):
+def build_tree(data1, data2):
     file_1, file_2 = data1, data2
     diff = {}
     key_set_file1 = set(file_1.keys())
@@ -23,7 +23,7 @@ def comparator(data1, data2):
         value_2 = file_2[key]
         if isinstance(file_1[key], dict) and isinstance(file_2[key], dict):
             diff[key] = {'status': 'nested',
-                         'value': comparator(value_1, value_2)}
+                         'value': build_tree(value_1, value_2)}
         elif file_2[key] != file_1[key]:
             diff[key] = {'status': 'changed', 'value': [value_2, value_1]}
 
