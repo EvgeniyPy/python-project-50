@@ -1,4 +1,4 @@
-from gendiff.parsing import parser, get_data
+from gendiff.parsing import get_data
 from gendiff.comparator import build_tree
 from gendiff.formatters.stylish import format_stylish
 from gendiff.formatters.plain import format_plain
